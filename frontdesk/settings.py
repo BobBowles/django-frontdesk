@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'mptt',
     'easy_thumbnails',
     'calendarium',
+    'diary',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -99,6 +100,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+# User customisation
+AUTHENTICATION_BACKENDS = (
+    'diary.backends.CustomUserModelBackend',
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
