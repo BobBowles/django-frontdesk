@@ -69,8 +69,10 @@ class Customer(User):
         return (self.first_name,)
 
     def age(self):
-        now = timezone.now()
-        return now.year - self.date_of_birth.year
+        if self.date_of_birth:
+            now = timezone.now()
+            return now.year - self.date_of_birth.year
+        return None
 
     def __str__(self):
         return '{0} {1}'.format(self.first_name, self.last_name)
