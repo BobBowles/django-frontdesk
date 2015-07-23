@@ -40,8 +40,8 @@ INSTALLED_APPS = (
     'filer',
     'mptt',
     'easy_thumbnails',
-    'calendarium',
     'diary',
+    'calendarium',
 )
 
 MIDDLEWARE_CLASSES = (
