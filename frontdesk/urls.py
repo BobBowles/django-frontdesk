@@ -18,6 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^calendar/', include('calendarium.urls')),
-    url(r'', include('diary.urls', namespace='diary')),
+#    url(r'^calendar/', include('calendarium.urls')),
+    url(r'', include('diary.urls')),
 ]
